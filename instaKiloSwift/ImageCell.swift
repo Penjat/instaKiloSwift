@@ -9,10 +9,13 @@
 import UIKit
 
 class ImageCell: UICollectionViewCell {
-  @IBOutlet weak var myImageView: UIImageView!
   
-  func setUpCell(image:UIImage){
-    myImageView.image = image
+  @IBOutlet weak var myImageView: UIImageView!
+  @IBOutlet weak var nameLabel: UILabel!
+  
+  func setUpCell(data:ImageData){
+    myImageView.image = data.image
+    nameLabel.text = data.name
   }
     
 }
